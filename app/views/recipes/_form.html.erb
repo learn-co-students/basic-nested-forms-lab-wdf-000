@@ -1,3 +1,10 @@
 <%= form_for @recipe do |f| %>
   Title: <%= f.text_field :title %>
+  Ingredients:
+    <input name='ingredients[quantity][]' id='recipe_ingredients_attributes_0_quantity'>
+    <input name='ingredients[quantity][]' id='recipe_ingredients_attributes_1_quantity'>
+    <input name='ingredients[name][]' id='recipe_ingredients_attributes_0_name'>
+    <input name='ingredients[name][]' id='recipe_ingredients_attributes_1_name'>
+    <%= link_to 'add ingredient', @recipe %>
+    <%= f.submit %>
 <% end %>
